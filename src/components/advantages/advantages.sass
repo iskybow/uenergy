@@ -1,20 +1,26 @@
-@import "../../shared/sass/vars"
+@import "../../shared/sass/base"
 
 .advantages
   padding: 90px 0
   color: #ffffff
-  background-color: $dark
   &__top
     display: flex
     justify-content: center
     align-items: flex-end
     font-weight: 800
+    @media (max-width: 678px)
+      flex-direction: column
+      align-items: center
     &-number
       margin-right: 10px
       font-size: 300px
       line-height: 0.5
+      @media (max-width: 678px)
+        line-height: 1
     &-text
       font-size: 21px
+      font-family: MullerExtraBold, sans-serif
+      font-weight: 700
     &-logo
       max-width: 300px
       margin-top: -15px
@@ -25,21 +31,30 @@
     flex-wrap: wrap
     justify-content: space-between
     margin: 90px -15px 0
+    @media (max-width: 550px)
+      justify-content: center
   &__item
     padding: 0 15px
     box-sizing: border-box
     margin-bottom: 15px
+    @media (max-width: 992px)
+      width: 40%!important
+    @media (max-width: 550px)
+      width: 100%!important
     &3
       width: calc(100% / 3)
       max-width: 330px
     &2
       width: 50%
+      @media (max-width: 550px)
+        max-width: 330px
     &-title
       display: flex
       align-items: center
       min-height: 90px
       margin-bottom: 15px
-      font-weight: 800
+      font-family: MullerExtraBold, sans-serif
+      font-weight: 700
       color: $orange
       font-size: 21px
       text-transform: uppercase
@@ -48,4 +63,5 @@
       padding-right: 15px
     &-text
       font-size: 15px
+      font-family: MullerRegular, sans-serif
       line-height: 1.5em

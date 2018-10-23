@@ -1,5 +1,6 @@
 .partners
   padding: 90px 0
+  background-color: #ebebeb
   &__slick
     margin: 40px 115px 0
     .slick-track
@@ -18,5 +19,9 @@
       cursor: pointer
     &-prev
       left: -160px
+      @media (max-width: 678px)
+        left: -60px
     &-next
       right: -160px
+      @media (max-width: 678px)
+        right: -60px

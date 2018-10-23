@@ -1,13 +1,19 @@
 extends ../components/layout-default/layout-default
+include ../components/header/header
+include ../components/services/services
+include ../components/about/about
 include ../components/advantages/advantages
 include ../components/partners/partners
 include ../components/map/map
 include ../components/footer/footer
 
 block head
-    - var pageTitle = 'Index Page';
+  - var pageTitle = 'Index Page';
 
 block content
+  +header()
+  +services()
+  +about()
   +advantages()
   +partners()
   +map()

@@ -1,0 +1,20 @@
+mixin header()
+  +b('header').header
+    +b('img')(src='assets/images/header_fon.png' alt='').image-fon
+    +b.container_flex-column
+      +b.social
+        +e('a')(href='#').insta
+          +b('i').fab.fa-instagram
+        +e('a')(href='#').facebook
+          +b('i').fab.fa-facebook-f
+      +b.nav-menu
+        +e('a')(href='#').links О компании
+        +e('a')(href='#').links услуги
+        +e('a')(href='#').links наши работы
+        +e('a')(href='#').links контакты
+      +b('img')(src='assets/images/logo.png' alt='').logo
+      +b('h1').logo-head Энергия, которая Нас объединяет
+      +b('button').btn.header-btn Скачать презентацию в формате PDF
+      +b.contacts
+        +e('p').phone 8 800 302-48-47
+        +e('p').addr г. Москва, ул. Мясницкая, 42, стр. 3, пом.3, 101000

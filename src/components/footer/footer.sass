@@ -1,13 +1,15 @@
-@import "../../shared/sass/vars"
+@import "../../shared/sass/base"
 
 .footer
   padding: 60px 0 40px
   color: #ffffff
-  background-color: $dark
   &__item
     display: flex
     flex-direction: column
     align-items: flex-start
+    @media (max-width: 992px)
+      align-items: center
+      margin: 20px 0
   &__menu
     display: flex
     flex-direction: column
@@ -28,6 +30,8 @@
   &-wrap
     display: flex
     justify-content: space-between
+    @media (max-width: 992px)
+      flex-direction: column
   &__center
     align-items: center
     justify-content: center
