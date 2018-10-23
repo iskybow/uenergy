@@ -2,12 +2,13 @@
   padding: 90px 0
   background-color: #ebebeb
   &__slick
-    margin: 40px 115px 0
+    margin: 40px 85px 0
+    @media (max-width: 767px)
+      margin: 40px 0 0
     .slick-track
       display: flex
       align-items: center
     &-item
-      max-height: 100px
       margin: 0 40px
     &-btn
       position: absolute
@@ -17,11 +18,13 @@
       border: none
       transform: translateY(-50%)
       cursor: pointer
+      @media (max-width: 767px)
+        display: none !important
     &-prev
       left: -160px
-      @media (max-width: 678px)
-        left: -60px
+      @media (max-width: 1200px)
+        left: -100px
     &-next
       right: -160px
-      @media (max-width: 678px)
-        right: -60px
+      @media (max-width: 1200px)
+        right: -100px
