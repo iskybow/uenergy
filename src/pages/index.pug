@@ -1,0 +1,14 @@
+extends ../components/layout-default/layout-default
+include ../components/advantages/advantages
+include ../components/partners/partners
+include ../components/map/map
+include ../components/footer/footer
+
+block head
+    - var pageTitle = 'Index Page';
+
+block content
+  +advantages()
+  +partners()
+  +map()
+  +footer()

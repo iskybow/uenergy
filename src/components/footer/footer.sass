@@ -1,0 +1,74 @@
+@import "../../shared/sass/vars"
+
+.footer
+  padding: 60px 0 40px
+  color: #ffffff
+  background-color: $dark
+  &__item
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+  &__menu
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    &-item
+      margin-bottom: 25px
+      font-size: 20px
+      color: inherit
+      font-weight: 500
+      text-decoration: none
+      text-transform: uppercase
+      transition: all 0.3s ease
+      &:hover
+        color: $orange
+  &__logo
+    margin-top: 20px
+    max-width: 190px
+  &-wrap
+    display: flex
+    justify-content: space-between
+  &__center
+    align-items: center
+    justify-content: center
+    padding: 15px
+    text-align: center
+  &__phone
+    margin: 25px 0 10px
+    font-weight: 800
+    font-size: 23px
+  &__address
+    font-weight: 500
+    font-size: 17px
+  &__social
+    display: flex
+    align-items: center
+    margin-top: 30px
+    font-weight: 800
+    font-size: 12px
+    &-item
+      display: inline-block
+      margin: 0 10px
+      &:first-of-type
+        margin-left: 20px
+  &__form
+    &-title
+      margin-bottom: 15px
+      font-size: 16px
+  &__input,
+  &__textarea
+    width: 200px
+    margin-bottom: 10px
+    padding: 10px 20px
+    color: inherit
+    background-color: transparent
+    border: 1px solid #ffffff
+    border-radius: 20px
+    &::placeholder
+      color: #ffffff
+  &__textarea
+    min-height: 100px
+    resize: none
+  &__btn
+    margin: 10px auto 0
+    font-size: 12px

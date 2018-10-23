@@ -1,0 +1,18 @@
+mixin partners()
+  +b('section').partners
+    .container
+      h2.title-main.text-center Наши партнеры
+      -
+        var data = [
+          "assets/images/partners1.png",
+          "assets/images/partners2.png",
+          "assets/images/partners3.png",
+          "assets/images/partners4.png",
+          "assets/images/partners1.png",
+          "assets/images/partners2.png",
+          "assets/images/partners3.png"
+        ]
+      +e.slick
+        each item in data
+          +e.slick-item
+            img(src= item)

@@ -1,0 +1,71 @@
+mixin advantages()
+  +b('section').advantages
+    .container
+      +e.top
+        +e('span').top-number 7
+        +e.top-main
+          +e('span').top-text Важных преимуществ <br> работы с
+          +e.top-logo
+            img(src="assets/images/logo.png")
+      +e.main
+        -
+          var data = [
+            {
+              img: "assets/images/advantages1.png",
+              title: "Сотрудники",
+              text: "Тщательный подбор сотрудников\n"+
+              "-специалистов в каждый отдел компании,\n"+
+              "высокий профессионализм в\n"+
+              "выполнении строительных работ"
+            },
+            {
+              img: "assets/images/advantages2.png",
+              title: "Поставщики",
+              text: "Проверенные крупные поставщики\n"+
+              "строительных материалов по\n"+
+              "всей России и СНГ"
+            },
+            {
+              img: "assets/images/advantages3.png",
+              title: "Спецтехника",
+              text: "Собственный парк спецтехники и необходимого оборудования"
+            },
+            {
+              img: "assets/images/advantages4.png",
+              title: "Сроки",
+              text: "Отлаженная схема процесса строительно\n"+
+              "-монтажных работ обеспечивает\n"+
+              "выполнение заказов в срок"
+            },
+            {
+              img: "assets/images/advantages5.png",
+              title: "Решения",
+              text: "Современный конструктивный\n"+
+              "подход к исполнению работ,\n"+
+              "предложение наиболее\n"+
+              "оптимальных решений выполнения\n"+
+              "проекта"
+            },
+            {
+              img: "assets/images/advantages6.png",
+              title: "Перспектива",
+              text: "Стабильные отношения с партнерами\n"+
+              "по бизнесу и заказчиками – мы\n"+
+              "работаем на долгосрочную перспективу"
+            },
+            {
+              img: "assets/images/advantages7.png",
+              title: "поддержка",
+              text: "Профессиональная поддержка заказчиков в решении сложных ситуаций –\n"+
+              "мы рады предоставить грамотную консультацию по любому виду строительных работ",
+              wrap: "advantages__item2"
+            }
+          ]
+        each item in data
+          +e.item(class=item.wrap || "advantages__item3")
+            +e.item-title
+              +e.item-img
+                img(src= item.img)
+              span= item.title
+            +e.item-text
+              p= item.text

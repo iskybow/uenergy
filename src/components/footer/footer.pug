@@ -1,0 +1,27 @@
+mixin footer()
+  +b('footer').footer
+    .container
+      .footer-wrap
+        +e.item
+          +e.menu
+            - var menu = ["О компании", "Услуги", "Наши работы", "Контакты"]
+            each item in menu
+              +e('a').menu-item(href="#")= item
+          +e.logo
+            img(src="assets/images/logo.png")
+        +e.item.__center
+          button.btn Скачать презентацию в формате PDF
+          +e('span').phone +7 (916) 555 05 58
+          +e('span').address г. Москва, ул. Мясницкая, 42, стр. 3, пом.3 <br> 101000d
+          +e.social
+            span Мы в соц. сетях:
+            +e('a').social-item(href="#")
+              img(src="assets/images/inst.png")
+            +e('a').social-item(href="#")
+              img(src="assets/images/fb.png")
+        +e('form').item
+          +e('span').form-title Заказать расчет сметы
+          +e('input').input(placeholder="Ваше имя")
+          +e('input').input(placeholder="Ваш телефон")
+          +e('textarea').textarea(placeholder="Ваш комментарий")
+          +e('button').btn.btn(type="submit") Заказать расчет
