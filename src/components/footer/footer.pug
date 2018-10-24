@@ -4,13 +4,31 @@ mixin footer()
       .footer-wrap
         +e.item
           +e.menu
-            - var menu = ["О компании", "Услуги", "Наши работы", "Контакты"]
+            -
+              var menu = [
+                {
+                  title: "О компании",
+                  href: "#company"
+                },
+                {
+                  title: "Услуги",
+                  href: "#services"
+                },
+                {
+                  title: "Наши работы",
+                  href: "#works"
+                },
+                {
+                  title: "Контакты",
+                  href: "#contacts"
+                }
+              ]
             each item in menu
-              +e('a').menu-item(href="#")= item
+              +e('a').menu-item(href= item.href)= item.title
           +e.logo
             img(src="assets/images/logo.png")
         +e.item.__center
-          button.btn Скачать презентацию в формате PDF
+          a.btn(href="assets/images/Prezent_YuE.pdf" target="_blank") Скачать презентацию в формате PDF
           +e('span').phone +7 (916) 555 05 58
           +e('span').address г. Москва, ул. Мясницкая, 42, стр. 3, пом.3 <br> 101000d
           +e.social
